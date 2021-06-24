@@ -33,6 +33,7 @@ class AppModulesTest : KoinTest {
                 presentationModules,
                 dataModules,
                 networkModules,
+                mapperModules,
                 anotherModules
             )
         }.checkModules()
