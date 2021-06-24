@@ -1,4 +1,4 @@
-package com.br.basedroid.presentation.ui
+package com.br.basedroid.presentation.simulation
 
 sealed class SimulationViewAction {
     data class GetSimulation(

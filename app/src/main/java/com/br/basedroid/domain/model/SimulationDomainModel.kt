@@ -1,5 +1,9 @@
 package com.br.basedroid.domain.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class SimulationDomainModel(
     val investmentParameter: InvestmentParameter,
     val grossAmount: Double,
@@ -13,7 +17,8 @@ data class SimulationDomainModel(
     val taxesRate: Double,
     val rateProfit: Double,
     val annualNetRateProfit: Double
-) {
+) : Parcelable {
+    @Parcelize
     data class InvestmentParameter(
         val investedAmount: Double,
         val yearlyInterestRate: Double,
@@ -22,5 +27,5 @@ data class SimulationDomainModel(
         val maturityDate: String,
         val rate: Double,
         val isTaxFree: Boolean
-    )
+    ) : Parcelable
 }

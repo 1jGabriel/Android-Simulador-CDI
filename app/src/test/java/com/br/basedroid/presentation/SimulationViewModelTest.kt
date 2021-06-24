@@ -1,9 +1,9 @@
 package com.br.basedroid.presentation
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.br.basedroid.presentation.ui.SimulationViewAction
-import com.br.basedroid.presentation.ui.SimulationViewModel
-import com.br.basedroid.presentation.ui.SimulationViewState
+import com.br.basedroid.presentation.simulation.SimulationViewAction
+import com.br.basedroid.presentation.simulation.SimulationViewModel
+import com.br.basedroid.presentation.simulation.SimulationViewState
 import com.br.basedroid.presentation.usecase.GetSimulationUseCase
 import com.br.basedroid.results.ResultFactory
 import com.br.basedroid.utils.MainCoroutineRule

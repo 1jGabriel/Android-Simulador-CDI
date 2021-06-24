@@ -1,4 +1,4 @@
-package com.br.basedroid.presentation.ui
+package com.br.basedroid.presentation.simulation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -40,7 +40,7 @@ class SimulationViewModel(
                     maturityDate = maturityDate
                 )
             }.onSuccess {
-                _viewState.postValue(SimulationViewState.Success)
+                _viewState.postValue(SimulationViewState.Success(it))
             }.onFailure {
                 _viewState.postValue(SimulationViewState.Error)
             }

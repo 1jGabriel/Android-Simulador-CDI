@@ -7,7 +7,7 @@ import com.br.basedroid.data.retrofit.RetrofitClient
 import com.br.basedroid.domain.mapper.SimulationResponseMapper
 import com.br.basedroid.domain.repository.SimulationRepository
 import com.br.basedroid.domain.usecase.GetSimulationUseCaseImpl
-import com.br.basedroid.presentation.ui.SimulationViewModel
+import com.br.basedroid.presentation.simulation.SimulationViewModel
 import com.br.basedroid.presentation.usecase.GetSimulationUseCase
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
