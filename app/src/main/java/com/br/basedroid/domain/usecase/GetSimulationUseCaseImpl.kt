@@ -18,12 +18,16 @@ class GetSimulationUseCaseImpl(
         rate: Int,
         maturityDate: String
     ) = withContext(dispatcher) {
-        simulationMapper.map(
-            repository.getSimulation(
-                investedAmount = investedAmount,
-                rate = rate,
-                maturityDate = maturityDate
+        try {
+            simulationMapper.map(
+                repository.getSimulation(
+                    investedAmount = investedAmount,
+                    rate = rate,
+                    maturityDate = maturityDate
+                )
             )
-        )
+        } catch (e: Exception) {
+            throw e
+        }
     }
 }

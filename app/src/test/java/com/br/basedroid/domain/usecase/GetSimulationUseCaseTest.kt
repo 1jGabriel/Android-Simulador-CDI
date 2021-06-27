@@ -1,6 +1,5 @@
 package com.br.basedroid.domain.usecase
 
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.br.basedroid.domain.mapper.SimulationResponseMapper
 import com.br.basedroid.domain.repository.SimulationRepository
 import com.br.basedroid.presentation.usecase.GetSimulationUseCase
