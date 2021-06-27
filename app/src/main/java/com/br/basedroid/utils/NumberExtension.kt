@@ -15,7 +15,6 @@ fun Long.dateIsInFuture(): Boolean {
     return days > 0
 }
 
-
 fun Double.formatPercentage(): String {
     val decimal = BigDecimal(this).setScale(2, RoundingMode.HALF_EVEN)
     val numberFormat: NumberFormat = NumberFormat.getCurrencyInstance(Locale.US)

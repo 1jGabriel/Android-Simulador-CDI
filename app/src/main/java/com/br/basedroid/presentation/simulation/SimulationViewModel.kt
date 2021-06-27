@@ -5,39 +5,92 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.br.basedroid.presentation.usecase.GetSimulationUseCase
+import com.br.basedroid.presentation.usecase.ValidAmountUseCase
+import com.br.basedroid.presentation.usecase.ValidDateUseCase
+import com.br.basedroid.presentation.usecase.ValidRateUseCase
+import com.br.basedroid.utils.cleanCurrencyCharacters
+import com.br.basedroid.utils.formatToServer
+import com.br.basedroid.utils.percentageToDouble
 import kotlinx.coroutines.launch
 
 class SimulationViewModel(
-    private val getSimulation: GetSimulationUseCase
+    private val getSimulation: GetSimulationUseCase,
+    private val validRate: ValidRateUseCase,
+    private val validDate: ValidDateUseCase,
+    private val validAmount: ValidAmountUseCase
 ) : ViewModel() {
 
     private val _viewState = MutableLiveData<SimulationViewState>()
+    private var date = ""
+    private var amount = ""
+    private var rate = ""
 
     val viewState: LiveData<SimulationViewState>
         get() = _viewState
 
     fun dispatchViewAction(action: SimulationViewAction) {
         when (action) {
-            is SimulationViewAction.GetSimulation -> handleGetSimulation(
-                action.investedAmount,
-                action.maturityDate,
-                action.rate
-            )
+            is SimulationViewAction.GetSimulation -> handleGetSimulation()
+            is SimulationViewAction.AmountChanged -> handleAmountChanged(action.text)
+            is SimulationViewAction.DateChanged -> handleDateChanged(action.text)
+            is SimulationViewAction.RateChanged -> handleRateChanged(action.text)
         }
     }
 
-    private fun handleGetSimulation(
-        investedAmount: Int,
-        maturityDate: String,
-        rate: Int
-    ) {
+    private fun handleAmountChanged(text: String) {
         viewModelScope.launch {
-            // TODO : Add use case to check if values are greater than 0
+            if (validAmount(text)) {
+                amount = text
+                _viewState.value = SimulationViewState.AmountFieldState(true)
+            } else {
+                amount = ""
+                _viewState.value = SimulationViewState.AmountFieldState(false)
+            }
+            checkFields()
+        }
+    }
+
+    private fun handleDateChanged(text: String) {
+        viewModelScope.launch {
+            if (validDate(text)) {
+                _viewState.value = SimulationViewState.DateFieldState(true)
+                date = text
+            } else {
+                date = ""
+                _viewState.value = SimulationViewState.DateFieldState(false)
+            }
+
+            checkFields()
+        }
+    }
+
+    private fun handleRateChanged(text: String) {
+        viewModelScope.launch {
+            if (validRate(text)) {
+                rate = text
+                _viewState.value = SimulationViewState.RateFieldState(true)
+            } else {
+                rate = ""
+                _viewState.value = SimulationViewState.RateFieldState(false)
+            }
+            checkFields()
+        }
+    }
+
+    private fun checkFields() {
+        _viewState.value =
+            SimulationViewState.ButtonState(
+                rate.isNotEmpty() || date.isNotEmpty() || amount.isNotEmpty()
+            )
+    }
+
+    private fun handleGetSimulation() {
+        viewModelScope.launch {
             runCatching {
                 getSimulation(
-                    investedAmount = investedAmount,
-                    rate = rate,
-                    maturityDate = maturityDate
+                    investedAmount = amount.cleanCurrencyCharacters().toInt(),
+                    rate = rate.percentageToDouble().toInt(),
+                    maturityDate = date.formatToServer()
                 )
             }.onSuccess {
                 _viewState.postValue(SimulationViewState.Success(it))

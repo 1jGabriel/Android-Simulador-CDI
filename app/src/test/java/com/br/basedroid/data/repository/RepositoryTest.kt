@@ -1,4 +1,4 @@
-package com.br.basedroid.data.datasource
+package com.br.basedroid.data.repository
 
 import com.br.basedroid.data.api.EasyApi
 import com.br.basedroid.data.repository.SimulationRepositoryImpl

@@ -71,7 +71,7 @@
 
             <TextView
                 android:id="@+id/result_initial_amount_label"
-                style="@style/result_label_text_view"
+                style="@style/ResultLabelTextView"
                 android:layout_marginTop="@dimen/large_space"
                 android:text="@string/result_initial_applied_label"
                 app:layout_constraintEnd_toStartOf="@id/result_initial_amount_value"
@@ -80,7 +80,7 @@
 
             <TextView
                 android:id="@+id/result_initial_amount_value"
-                style="@style/result_value_text_view"
+                style="@style/ResultValueTextView"
                 android:layout_marginTop="@dimen/large_space"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/result_initial_amount_label"
@@ -88,7 +88,7 @@
 
             <TextView
                 android:id="@+id/result_gross_amount_label"
-                style="@style/result_label_text_view"
+                style="@style/ResultLabelTextView"
                 android:text="@string/result_gross_invesment_amount_label"
                 app:layout_constraintEnd_toStartOf="@id/result_gross_value"
                 app:layout_constraintStart_toStartOf="parent"
@@ -96,14 +96,14 @@
 
             <TextView
                 android:id="@+id/result_gross_value"
-                style="@style/result_value_text_view"
+                style="@style/ResultValueTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/result_gross_amount_label"
                 app:layout_constraintTop_toBottomOf="@+id/result_initial_amount_label" />
 
             <TextView
                 android:id="@+id/result_profit_amount_label"
-                style="@style/result_label_text_view"
+                style="@style/ResultLabelTextView"
                 android:text="@string/result_profit_amount_label"
                 app:layout_constraintEnd_toStartOf="@id/result_profit_value"
                 app:layout_constraintStart_toStartOf="parent"
@@ -111,14 +111,14 @@
 
             <TextView
                 android:id="@+id/result_profit_value"
-                style="@style/result_value_text_view"
+                style="@style/ResultValueTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/result_profit_amount_label"
                 app:layout_constraintTop_toBottomOf="@+id/result_gross_amount_label" />
 
             <TextView
                 android:id="@+id/result_taxes_amount_label"
-                style="@style/result_label_text_view"
+                style="@style/ResultLabelTextView"
                 android:text="@string/result_taxes_amount_label"
                 app:layout_constraintEnd_toStartOf="@id/result_taxes_amount_value"
                 app:layout_constraintStart_toStartOf="parent"
@@ -126,14 +126,14 @@
 
             <TextView
                 android:id="@+id/result_taxes_amount_value"
-                style="@style/result_value_text_view"
+                style="@style/ResultValueTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/result_taxes_amount_label"
                 app:layout_constraintTop_toBottomOf="@+id/result_profit_amount_label" />
 
             <TextView
                 android:id="@+id/result_net_amount_label"
-                style="@style/result_label_text_view"
+                style="@style/ResultLabelTextView"
                 android:text="@string/result_net_amount_label"
                 app:layout_constraintEnd_toStartOf="@id/result_net_amount_value"
                 app:layout_constraintStart_toStartOf="parent"
@@ -141,14 +141,14 @@
 
             <TextView
                 android:id="@+id/result_net_amount_value"
-                style="@style/result_value_text_view"
+                style="@style/ResultValueTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/result_net_amount_label"
                 app:layout_constraintTop_toBottomOf="@+id/result_taxes_amount_label" />
 
             <TextView
                 android:id="@+id/result_maturity_date_label"
-                style="@style/result_label_text_view"
+                style="@style/ResultLabelTextView"
                 android:layout_marginTop="@dimen/large_space"
                 android:text="@string/result_maturity_date_label"
                 app:layout_constraintEnd_toStartOf="@id/result_maturity_date_value"
@@ -157,7 +157,7 @@
 
             <TextView
                 android:id="@+id/result_maturity_date_value"
-                style="@style/result_value_text_view"
+                style="@style/ResultValueTextView"
                 android:layout_marginTop="@dimen/large_space"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/result_maturity_date_label"
@@ -165,7 +165,7 @@
 
             <TextView
                 android:id="@+id/result_maturity_days_label"
-                style="@style/result_label_text_view"
+                style="@style/ResultLabelTextView"
                 android:text="@string/result_maturity_days_label"
                 app:layout_constraintEnd_toStartOf="@id/result_maturity_days_value"
                 app:layout_constraintStart_toStartOf="parent"
@@ -173,14 +173,14 @@
 
             <TextView
                 android:id="@+id/result_maturity_days_value"
-                style="@style/result_value_text_view"
+                style="@style/ResultValueTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/result_maturity_days_label"
                 app:layout_constraintTop_toBottomOf="@+id/result_maturity_date_label" />
 
             <TextView
                 android:id="@+id/result_monthly_profit_label"
-                style="@style/result_label_text_view"
+                style="@style/ResultLabelTextView"
                 android:text="@string/result_monthly_profit_label"
                 app:layout_constraintEnd_toStartOf="@id/result_monthly_profit_value"
                 app:layout_constraintStart_toStartOf="parent"
@@ -188,14 +188,14 @@
 
             <TextView
                 android:id="@+id/result_monthly_profit_value"
-                style="@style/result_value_text_view"
+                style="@style/ResultValueTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/result_monthly_profit_label"
                 app:layout_constraintTop_toBottomOf="@+id/result_maturity_days_label" />
 
             <TextView
                 android:id="@+id/result_rate_label"
-                style="@style/result_label_text_view"
+                style="@style/ResultLabelTextView"
                 android:text="@string/result_rate_label"
                 app:layout_constraintEnd_toStartOf="@id/result_rate_value"
                 app:layout_constraintStart_toStartOf="parent"
@@ -203,14 +203,14 @@
 
             <TextView
                 android:id="@+id/result_rate_value"
-                style="@style/result_value_text_view"
+                style="@style/ResultValueTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/result_rate_label"
                 app:layout_constraintTop_toBottomOf="@+id/result_monthly_profit_label" />
 
             <TextView
                 android:id="@+id/result_annual_profit_label"
-                style="@style/result_label_text_view"
+                style="@style/ResultLabelTextView"
                 android:text="@string/result_annual_profit_label"
                 app:layout_constraintEnd_toStartOf="@id/result_annual_profit_value"
                 app:layout_constraintStart_toStartOf="parent"
@@ -218,14 +218,14 @@
 
             <TextView
                 android:id="@+id/result_annual_profit_value"
-                style="@style/result_value_text_view"
+                style="@style/ResultValueTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/result_annual_profit_label"
                 app:layout_constraintTop_toBottomOf="@+id/result_rate_label" />
 
             <TextView
                 android:id="@+id/result_period_profit_label"
-                style="@style/result_label_text_view"
+                style="@style/ResultLabelTextView"
                 android:text="@string/result_period_profit_label"
                 app:layout_constraintEnd_toStartOf="@id/result_period_profit_value"
                 app:layout_constraintStart_toStartOf="parent"
@@ -233,7 +233,7 @@
 
             <TextView
                 android:id="@+id/result_period_profit_value"
-                style="@style/result_value_text_view"
+                style="@style/ResultValueTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/result_period_profit_label"
                 app:layout_constraintTop_toBottomOf="@+id/result_annual_profit_label" />
@@ -242,7 +242,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/result_result_simulate_again_btn"
-        style="@style/common_material_button"
+        style="@style/CommonMaterialButton"
         android:layout_marginStart="@dimen/medium_space"
         android:layout_marginEnd="@dimen/medium_space"
         android:layout_marginBottom="@dimen/large_space"

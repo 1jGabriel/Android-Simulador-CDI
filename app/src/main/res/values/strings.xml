@@ -6,9 +6,9 @@
     <string name="simulation_value_hint">R$</string>
     <string name="simulation_value_error">Necessário informar o valor a ser aplicado.</string>
 
-    <string name="simulation_cdi_label">Qual o percentual do CDI do investimento? *</string>
-    <string name="simulation_cdi_hint">100%</string>
-    <string name="simulation_cdi_error">Necessário informar o valor do percentual do CDI.</string>
+    <string name="simulation_rate_label">Qual o percentual do CDI do investimento? *</string>
+    <string name="simulation_rate_hint">100%</string>
+    <string name="simulation_rate_error">Necessário informar o valor do percentual do CDI.</string>
 
     <string name="simulation_date_label">Qual a data de vencimento do investimento? *</string>
     <string name="simulation_date_hint">dia/mês/ano</string>
@@ -36,5 +36,7 @@
     <string name="result_simulation_again_button">Simular</string>
     <string name="result_final_profit_label">Rendimento total de</string>
     <string name="result_button_text">Simular novamente</string>
+    <string name="simular_simulate_btn_text">Simular</string>
+    <string name="simulation_error_msg">Tivemos um erro, tente novamente</string>
 
 </resources>
