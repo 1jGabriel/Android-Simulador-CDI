@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="medium_space">16dp</dimen>
+    <dimen name="h1_text_size">52sp</dimen>
+    <dimen name="p1_text_size">18sp</dimen>
+    <dimen name="large_space">32dp</dimen>
+    <dimen name="small_space">4dp</dimen>
+</resources>

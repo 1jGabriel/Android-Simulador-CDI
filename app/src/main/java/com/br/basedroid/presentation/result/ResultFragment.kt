@@ -29,9 +29,38 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val args = ResultFragmentArgs.fromBundle(requireArguments()).simulationResult
-        binding.teste.text = args.toString()
+        setupScreenValues(args)
         requireActivity().onBackPressedDispatcher.addCallback(requireActivity()) {
             findNavController().navigate(R.id.action_restart)
+        }
+        setupListener()
+    }
+
+    private fun setupListener() {
+        binding.resultResultSimulateAgainBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_restart)
+        }
+    }
+
+    private fun setupScreenValues(args: SimulationDomainModel) {
+        with(args) {
+            binding.apply {
+                resultInitialAmountValue.text = investmentParameter.investedAmount
+                resultFinalAmountValue.text = grossAmount
+                resultGrossValue.text = grossAmount
+                resultFinalProfitAmountValue.text = grossAmountProfit
+                resultTaxesAmountValue.text = taxesAmount
+                resultNetAmountValue.text = netAmount
+                resultMaturityDateValue.text = investmentParameter.maturityDate
+                resultMaturityDaysValue.text = investmentParameter.maturityTotalDays.toString()
+                resultMonthlyProfitValue.text = monthlyGrossRateProfit
+                resultRateValue.text = investmentParameter.rate
+                resultAnnualProfitValue.text = annualGrossRateProfit
+                resultPeriodProfitValue.text = rateProfit
+                resultGrossValue.text = grossAmount
+                resultProfitValue.text = grossAmountProfit
+
+            }
         }
     }
 }

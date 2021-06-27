@@ -1,6 +1,40 @@
 <resources>
-    <string name="app_name">Basedroid</string>
-    <string name="presentation">Projeto base criado por: Aline Souza</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Teste easynvest</string>
+
+    <!--    Simulation fragment-->
+    <string name="simulation_value_label">Quanto você gostaria de aplicar? *</string>
+    <string name="simulation_value_hint">R$</string>
+    <string name="simulation_value_error">Necessário informar o valor a ser aplicado.</string>
+
+    <string name="simulation_cdi_label">Qual o percentual do CDI do investimento? *</string>
+    <string name="simulation_cdi_hint">100%</string>
+    <string name="simulation_cdi_error">Necessário informar o valor do percentual do CDI.</string>
+
+    <string name="simulation_date_label">Qual a data de vencimento do investimento? *</string>
+    <string name="simulation_date_hint">dia/mês/ano</string>
+    <string name="simulation_date_error">Necessário informar uma data de vencimento válida.</string>
+
+    <string name="simulation_button">Simular</string>
+
+    <!--Result fragment-->
+
+    <string name="result_result_label">Resultado da simulação</string>
+    <string name="result_total_investment_value">Rendimento total de</string>
+
+    <string name="result_initial_applied_label">Valor aplicado inicialmente</string>
+    <string name="result_gross_invesment_amount_label">Valor bruto do investimento</string>
+    <string name="result_profit_amount_label">Valor do rendimento</string>
+    <string name="result_taxes_amount_label">IR sobre o investimento</string>
+    <string name="result_net_amount_label">Valor líquido do investimento</string>
+
+    <string name="result_maturity_date_label">Data de resgate</string>
+    <string name="result_maturity_days_label">Dias corridos</string>
+    <string name="result_monthly_profit_label">Rendimento mensal</string>
+    <string name="result_rate_label">Percentual do CDI do investimento</string>
+    <string name="result_annual_profit_label">Rentabilidade anual</string>
+    <string name="result_period_profit_label">Rentabilidade no período</string>
+    <string name="result_simulation_again_button">Simular</string>
+    <string name="result_final_profit_label">Rendimento total de</string>
+    <string name="result_button_text">Simular novamente</string>
+
 </resources>
