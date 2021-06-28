@@ -80,7 +80,7 @@ class SimulationViewModel(
     private fun checkFields() {
         _viewState.value =
             SimulationViewState.ButtonState(
-                rate.isNotEmpty() || date.isNotEmpty() || amount.isNotEmpty()
+                rate.isNotEmpty() && date.isNotEmpty() && amount.isNotEmpty()
             )
     }
 

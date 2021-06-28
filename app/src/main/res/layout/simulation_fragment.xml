@@ -13,6 +13,7 @@
         style="@style/HomeLabelTextView"
         android:text="@string/simulation_value_label"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -21,12 +22,14 @@
         android:hint="@string/simulation_value_hint"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simulation_amount_label" />
 
     <View
         android:id="@+id/simulation_amount_separator"
-        style="@style/Home_ViewSeparator"
+        style="@style/HomeSeparatorView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simulation_amount_input" />
 
     <TextView
@@ -35,6 +38,7 @@
         android:focusableInTouchMode="true"
         android:text="@string/simulation_date_label"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simulation_amount_input" />
 
     <EditText
@@ -43,12 +47,14 @@
         android:hint="@string/simulation_date_hint"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simulation_maturity_date_label" />
 
     <View
         android:id="@+id/simulation_maturity_date_separator"
-        style="@style/Home_ViewSeparator"
+        style="@style/HomeSeparatorView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simulation_maturity_date_input" />
 
     <TextView
@@ -56,6 +62,7 @@
         style="@style/HomeLabelTextView"
         android:text="@string/simulation_rate_label"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simulation_maturity_date_separator" />
 
     <EditText
@@ -64,12 +71,14 @@
         android:hint="@string/simulation_rate_hint"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simulation_rate_label" />
 
     <View
         android:id="@+id/simulation_rate_separator"
-        style="@style/Home_ViewSeparator"
+        style="@style/HomeSeparatorView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simulation_rate_input" />
 
     <com.google.android.material.button.MaterialButton
@@ -82,6 +91,8 @@
         android:text="@string/simular_simulate_btn_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/simulation_rate_input"
+        app:layout_constraintVertical_bias="1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
