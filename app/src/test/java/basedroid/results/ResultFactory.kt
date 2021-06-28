@@ -1,6 +1,6 @@
 package basedroid.results
 
-import com.br.basedroid.domain.model.SimulationDomainModel
+import basedroid.domain.model.SimulationDomainModel
 
 object ResultFactory {
     val simulationResponse = basedroid.data.model.SimulationResponse(
