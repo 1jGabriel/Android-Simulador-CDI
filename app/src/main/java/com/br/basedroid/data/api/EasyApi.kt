@@ -8,7 +8,7 @@ interface EasyApi {
 
     @GET("v3/ecfaebf5-782b-4b24-ae4f-23b5c3a861da")
     suspend fun getSimulation(
-        @Query("investedAmount") investedAmount: Int,
+        @Query("investedAmount") investedAmount: Double,
         @Query("index") index: String = "CDI",
         @Query("rate") rate: Int,
         @Query("isTaxFree") isTaxFree: Boolean = false,

@@ -1,10 +1,5 @@
 package com.br.basedroid.utils
 
-import java.math.BigDecimal
-import java.math.RoundingMode
-import java.text.NumberFormat
-import java.util.*
-
 fun String.twoDecimals(): String {
     return when (this.length) {
         1 -> "0$this"
@@ -47,20 +42,6 @@ fun String.percentageToDouble() = this.replace(",", ";")
     .replace(";", ".")
     .replace("%", "")
     .toDouble()
-
-
-fun String.formatPercentage(): String {
-    val number = this.replace("%", "")
-        .replace(",", ";")
-        .replace(".", "")
-        .replace(";", ".")
-        .toDouble()
-    val decimal = BigDecimal(number).setScale(2, RoundingMode.HALF_EVEN)
-    val numberFormat: NumberFormat = NumberFormat.getCurrencyInstance(Locale.US)
-    val currency = numberFormat.format((decimal.toDouble()))
-    return currency.replace(",", "")
-        .replace("$", "")
-}
 
 fun String.cleanCurrencyCharacters(): String {
     return this.replace("R", "")

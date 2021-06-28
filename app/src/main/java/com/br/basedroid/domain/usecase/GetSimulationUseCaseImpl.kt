@@ -14,7 +14,7 @@ class GetSimulationUseCaseImpl(
 ) : GetSimulationUseCase {
 
     override suspend operator fun invoke(
-        investedAmount: Int,
+        investedAmount: Double,
         rate: Int,
         maturityDate: String
     ) = withContext(dispatcher) {

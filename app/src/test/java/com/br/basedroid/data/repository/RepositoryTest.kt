@@ -25,7 +25,7 @@ class RepositoryTest {
         // Given
         whenever(
             api.getSimulation(
-                investedAmount = 123,
+                investedAmount = 123.0,
                 rate = 0,
                 maturityDate = "",
             )
@@ -35,14 +35,14 @@ class RepositoryTest {
 
         // When
         val result = repository.getSimulation(
-            investedAmount = 123,
+            investedAmount = 123.0,
             rate = 0,
             maturityDate = ""
         )
 
         // Then
         verify(api).getSimulation(
-            investedAmount = 123,
+            investedAmount = 123.0,
             rate = 0,
             maturityDate = ""
         )

@@ -47,7 +47,6 @@ class SimulationFragment : Fragment() {
         viewModel.viewState.observe(requireActivity(), {
             when (it) {
                 is SimulationViewState.Error -> handleError()
-                is SimulationViewState.Loading -> handleLoading()
                 is SimulationViewState.DateFieldState -> handleMissingDate(it.validField)
                 is SimulationViewState.RateFieldState -> handleMissingRate(it.validField)
                 is SimulationViewState.AmountFieldState -> handleMissingValue(it.validField)
@@ -100,10 +99,6 @@ class SimulationFragment : Fragment() {
             getString(R.string.simulation_error_msg),
             Toast.LENGTH_SHORT
         ).show()
-    }
-
-    private fun handleLoading() {
-        // TODO add loading
     }
 
     private fun handleMissingDate(validField: Boolean) {

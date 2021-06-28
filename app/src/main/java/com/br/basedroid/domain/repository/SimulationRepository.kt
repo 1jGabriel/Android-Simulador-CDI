@@ -4,7 +4,7 @@ import com.br.basedroid.data.model.SimulationResponse
 
 interface SimulationRepository {
     suspend fun getSimulation(
-        investedAmount: Int,
+        investedAmount: Double,
         rate: Int,
         maturityDate: String
     ): SimulationResponse

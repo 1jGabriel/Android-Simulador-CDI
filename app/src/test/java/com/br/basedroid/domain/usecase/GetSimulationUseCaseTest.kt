@@ -29,7 +29,7 @@ class GetSimulationUseCaseTest {
     fun `when invoke getSimulation should return success`() = runBlockingTest {
         whenever(
             repository.getSimulation(
-                investedAmount = 0,
+                investedAmount = 0.0,
                 rate = 0,
                 maturityDate = ""
             )
@@ -41,7 +41,7 @@ class GetSimulationUseCaseTest {
 
         // When
         val result =
-            useCase.invoke(investedAmount = 0, rate = 0, maturityDate = "")
+            useCase.invoke(investedAmount = 0.0, rate = 0, maturityDate = "")
         // Then
         assertEquals(result, simulationModel)
     }

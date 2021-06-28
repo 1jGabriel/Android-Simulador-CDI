@@ -7,6 +7,6 @@ class ValidRateUseCaseImpl : ValidRateUseCase {
     override suspend operator fun invoke(
         rate: String
     ): Boolean {
-        return rate.percentageToDouble() > 100
+        return rate.percentageToDouble() >= 100
     }
 }

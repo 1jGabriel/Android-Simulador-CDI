@@ -4,7 +4,7 @@ import com.br.basedroid.domain.model.SimulationDomainModel
 
 interface GetSimulationUseCase {
     suspend operator fun invoke(
-        investedAmount: Int,
+        investedAmount: Double,
         rate: Int,
         maturityDate: String
     ): SimulationDomainModel

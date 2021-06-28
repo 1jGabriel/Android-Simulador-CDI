@@ -88,7 +88,7 @@ class SimulationViewModel(
         viewModelScope.launch {
             runCatching {
                 getSimulation(
-                    investedAmount = amount.cleanCurrencyCharacters().toInt(),
+                    investedAmount = amount.cleanCurrencyCharacters().toDouble(),
                     rate = rate.percentageToDouble().toInt(),
                     maturityDate = date.formatToServer()
                 )

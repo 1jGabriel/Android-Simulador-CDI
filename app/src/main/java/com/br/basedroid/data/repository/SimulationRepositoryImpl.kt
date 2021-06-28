@@ -8,7 +8,7 @@ class SimulationRepositoryImpl(
 ) : SimulationRepository {
 
     override suspend fun getSimulation(
-        investedAmount: Int,
+        investedAmount: Double,
         rate: Int,
         maturityDate: String
     ) = api.getSimulation(

@@ -6,8 +6,7 @@ import android.text.TextWatcher
 open class NumberMask(
     private val maskTemplate: String,
     private val maskAfterTemplate: String? = null,
-    private val bulkInputMode: BulkInputMode = BulkInputMode.LEADING,
-    internal var validation: ((Boolean) -> Unit)? = null
+    private val bulkInputMode: BulkInputMode = BulkInputMode.LEADING
 ) : TextWatcher {
 
     enum class BulkInputMode {
@@ -80,22 +79,6 @@ open class NumberMask(
         text.replace(0, previousLength, formatted, 0, currentLength)
 
         text.filters = editableFilters
-
-        validation?.invoke(rawTextLength(text) == rawMaskLength(maskTemplate))
-    }
-
-    fun unmask(text: Editable?, maskTemplate: String): Editable? {
-        if (text.isNullOrEmpty()) return null
-
-        val unformatted = StringBuilder()
-        val textLength = text.length
-        maskTemplate.forEachIndexed { index, m ->
-            if (index >= textLength) return@forEachIndexed
-            if (m.isPlaceHolder()) {
-                unformatted.append(text[index])
-            }
-        }
-        return Editable.Factory.getInstance().newEditable(unformatted.toString())
     }
 
     private fun normalizeText(text: Editable, maskTemplate: String) {
