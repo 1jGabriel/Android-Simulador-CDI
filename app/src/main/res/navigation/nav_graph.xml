@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/simulationFragment"
-        android:name="com.br.basedroid.presentation.simulation.SimulationFragment"
+        android:name="basedroid.presentation.simulation.SimulationFragment"
         tools:layout="@layout/simulation_fragment">
 
         <action
@@ -20,18 +20,18 @@
             <argument
                 android:name="simulationResult"
                 android:defaultValue="@null"
-                app:argType="com.br.basedroid.domain.model.SimulationDomainModel"
+                app:argType="basedroid.domain.model.SimulationDomainModel"
                 app:nullable="true" />
         </action>
     </fragment>
 
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.br.basedroid.presentation.result.ResultFragment"
+        android:name="basedroid.presentation.result.ResultFragment"
         tools:layout="@layout/result_fragment">
         <argument
             android:name="simulationResult"
-            app:argType="com.br.basedroid.domain.model.SimulationDomainModel" />
+            app:argType="basedroid.domain.model.SimulationDomainModel" />
         <action
             android:id="@+id/action_restart"
             app:destination="@+id/simulationFragment"
